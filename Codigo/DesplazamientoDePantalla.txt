@@ -1,0 +1,48 @@
+Multitouch.inputMode = MultitouchInputMode.GESTURE;
+
+var actual:Number = 1;
+var total:Number = 2;
+
+stage.addEventListener (TransformGestureEvent.GESTURE_SWIPE, cambiar);
+
+function cambiar(event:TransformGestureEvent):void
+{
+	if(event.offsetX == 1)
+	{
+		if(actual > 1){
+			actual--;
+			derecha();
+		}
+	}
+	else if(event.offsetX == -1)
+	{
+		if(actual < total){
+			actual++;
+			izquierda();
+		}
+	}
+}
+var cont:Number = 0;
+function izquierda(){
+	pantallas.addEventListener("enterFrame", moverIzq);
+}
+function derecha(){
+	pantallas.addEventListener("enterFrame", moverDer);
+}
+
+function moverIzq(evt:Event){
+	pantallas.x -= 48;
+	cont++;
+	if(cont == 10){
+		pantallas.removeEventListener("enterFrame", moverIzq);
+		cont = 0;
+	}
+}
+function moverDer(evt:Event){
+	pantallas.x += 48;
+	cont++;
+	if(cont == 10){
+		pantallas.removeEventListener("enterFrame", moverDer);
+		cont = 0;
+	}
+}
