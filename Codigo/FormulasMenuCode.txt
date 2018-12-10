@@ -1,0 +1,786 @@
+import flash.events.MouseEvent;
+
+stop();
+///////////////////////////////////////////////////////
+	txtTitle.text = "Velocidad inicial:";
+	txtUno.text = "Vi=  Vf - at";
+	txtDos.text = "Vi=  √((Vf^2)-(2ad))";
+	btnVi1.visible = true;
+	btnVi2.visible = true;
+	btnVf1.visible = false;
+	btnVf2.visible = false;
+	btnA1.visible = false;
+	btnA2.visible = false;
+	btnD1.visible = false;
+	btnD2.visible = false;
+///////////////////////////////////////////////////////
+	
+	var form:String = "";
+	
+	backFormulas.visible = false;
+	TitleFormulas.visible = false;
+	TitlesFormulas.visible = false;
+	btnCloseFormulas.visible = false;
+	btnSelectVi.visible = false;
+	btnSelectVf.visible = false;
+	btnSelectA.visible = false;
+	btnSelectD.visible = false;
+
+	btnCerrar.visible = false;
+	btnLimpiar.visible = false;
+	btnResul.visible = false;
+	fondo.visible = false;
+	txtTitulo.visible = false;
+	txtFormula.visible = false;
+	var1.visible = false;
+	var2.visible = false;
+	var3.visible = false;
+	var4.visible = false;
+	var5.visible = false;
+	txt1.visible = false;
+	txt2.visible = false;
+	txt3.visible = false;
+	txt4.visible = false;
+	txt5.visible = false;
+	fondo1.visible = false;
+	fondo2.visible = false;
+	fondo3.visible = false;
+	fondo4.visible = false;
+	fondo5.visible = false;
+	txtsViUno.visible = false;
+	txtsViDos.visible= false;
+	txtvf.visible = false;
+	txtvf2.visible = false;
+	txta.visible = false;
+	txtt.visible = false;
+	txtat.visible = false;
+	txtresul.visible = false;
+	vf.visible = false;
+	a.visible = false;
+	d.visible = false;
+	ad.visible = false;
+	ad2.visible = false;
+	vf2.visible = false;
+	vf22.visible = false;
+	vf2ad.visible = false;
+	fin.visible = false;
+	txtsVfUno.visible = false;
+	VfUnoVi.visible = false;
+	VfUnoA.visible = false;
+	VfUnoT.visible = false;
+	VfUnoVi2.visible = false;
+	VfUnoAT.visible = false;
+	VfUnoFin.visible = false;
+	txtsVfDos.visible = false;
+	VfDosVi.visible = false;
+	VfDosA.visible = false;
+	VfDosD.visible = false;
+	VfDosViCuad.visible = false;
+	VfDosAD.visible = false;
+	VfDosViCuad2.visible = false;
+	VfDos2AD.visible = false;
+	VfDosCasi.visible = false;
+	VfDosFinal.visible = false;
+	txtsAUno.visible = false;
+	AUnoVf.visible = false;
+	AUnoVi.visible = false;
+	AUnoT.visible = false;
+	AUnoVfVi.visible = false;
+	AUnoT2.visible = false;
+	AUnoFin.visible = false;
+	txtsADos.visible = false;
+	ADosVf.visible = false;
+	ADosVi.visible = false;
+	ADosD.visible = false;
+	ADosVfCuad.visible = false;
+	ADosViCuad.visible = false;
+	ADos2D.visible = false;
+	ADosVfVi.visible = false;
+	ADos2D2.visible = false;
+	ADosFin.visible = false;
+	txtsDUno.visible = false;
+	DUnoVf.visible = false;
+	DUnoVi.visible = false;
+	DUnoA.visible = false;
+	DUnoVfCuad.visible = false;
+	DUnoViCuad.visible = false;
+	DUno2A.visible = false;
+	DUnoVfVi.visible = false;
+	DUno2A2.visible = false;
+	DUnoFin.visible = false;
+	txtsDDos.visible = false;
+	DDosVi.visible = false;
+	DDosT1.visible = false;
+	DDosA.visible = false;
+	DDosT.visible = false;
+	DDosViT.visible = false;
+	DDosA2.visible = false;
+	DDosTCuad.visible = false;
+	DDosViT2.visible = false;
+	DDosMedioAT.visible = false;
+	DDosFin.visible = false;
+
+btnVi1.addEventListener(MouseEvent.CLICK,ViUno);
+btnVi2.addEventListener(MouseEvent.CLICK,ViDos);
+btnVf1.addEventListener(MouseEvent.CLICK,VfUno);
+btnVf2.addEventListener(MouseEvent.CLICK,VfDos);
+btnA1.addEventListener(MouseEvent.CLICK,AUno);
+btnA2.addEventListener(MouseEvent.CLICK,ADos);
+btnD1.addEventListener(MouseEvent.CLICK,DUno);
+btnD2.addEventListener(MouseEvent.CLICK,DDos);
+
+btnCerrar.addEventListener(MouseEvent.CLICK,close);
+btnResul.addEventListener(MouseEvent.CLICK,resulta);
+btnLimpiar.addEventListener(MouseEvent.CLICK,clean);
+btnMoreFormulas.addEventListener(MouseEvent.CLICK,more);
+btnCloseFormulas.addEventListener(MouseEvent.CLICK,closeFormulas);
+btnSelectVi.addEventListener(MouseEvent.CLICK,SelectVi);
+btnSelectVf.addEventListener(MouseEvent.CLICK,SelectVf);
+btnSelectA.addEventListener(MouseEvent.CLICK,SelectA);
+btnSelectD.addEventListener(MouseEvent.CLICK,SelectD);
+//===================================================================================================
+function more(e:MouseEvent):void{
+	backFormulas.visible = true;
+	TitleFormulas.visible = true;
+	TitlesFormulas.visible = true;
+	btnCloseFormulas.visible = true;
+	btnSelectVi.visible = true;
+	btnSelectVf.visible = true;
+	btnSelectA.visible = true;
+	btnSelectD.visible = true;
+}
+
+
+function SelectVi(e:MouseEvent):void{
+	txtTitle.text = "Initial velocity:";
+	txtUno.text = "Vi=  Vf - at";
+	txtDos.text = "Vi=  √((Vf^2)-(2ad))";
+	btnVi1.visible = true;
+	btnVi2.visible = true;
+	btnVf1.visible = false;
+	btnVf2.visible = false;
+	btnA1.visible = false;
+	btnA2.visible = false;
+	btnD1.visible = false;
+	btnD2.visible = false;
+	hidee();
+}
+function SelectVf(e:MouseEvent):void{
+	txtTitle.text = "Final velocity:";
+	txtUno.text = "Vf= Vi + at";
+	txtDos.text = "Vf= √((Vi^2)+(2ad))";
+	btnVi1.visible = false;
+	btnVi2.visible = false;
+	btnVf1.visible = true;
+	btnVf2.visible = true;
+	btnA1.visible = false;
+	btnA2.visible = false;
+	btnD1.visible = false;
+	btnD2.visible = false;
+	hidee();
+}
+function SelectA(e:MouseEvent):void{
+	txtTitle.text = "Acceleration:";
+	txtUno.text = "a=(Vf-Vi)/t";
+	txtDos.text = "a=((Vf^2)-(Vi^2))/(2d)";
+	btnVi1.visible = false;
+	btnVi2.visible = false;
+	btnVf1.visible = false;
+	btnVf2.visible = false;
+	btnA1.visible = true;
+	btnA2.visible = true;
+	btnD1.visible = false;
+	btnD2.visible = false;
+	hidee();
+}
+function SelectD(e:MouseEvent):void{
+	txtTitle.text = "Distance:";
+	txtUno.text = "d=((Vf^2)-(Vi^2))/(2a)";
+	txtDos.text = "d=(Vit)+(1/2a(t^2))";
+	btnVi1.visible = false;
+	btnVi2.visible = false;
+	btnVf1.visible = false;
+	btnVf2.visible = false;
+	btnA1.visible = false;
+	btnA2.visible = false;
+	btnD1.visible = true;
+	btnD2.visible = true;
+	hidee();
+}
+
+//===================================================================================================
+function ViUno(e:MouseEvent):void{
+	btnCerrar.visible = true;
+	btnLimpiar.visible = true;
+	btnResul.visible = true;
+	fondo.visible = true;
+	txtTitulo.visible = true;
+	txtTitulo.text = "Initial velocity formula:";
+	txtFormula.visible = true;
+	txtFormula.text = "Vi=Vf-at";
+	var1.visible = true;
+	var1.text = "Vf=";
+	var2.visible = true;
+	var2.text = "a=";
+	var3.visible = true;
+	var3.text = "t=";
+	txt1.visible = true;
+	txt2.visible = true;
+	txt3.visible = true;
+	fondo1.visible = true;
+	fondo2.visible = true;
+	fondo3.visible = true;
+	form="viUno";
+	
+}
+
+function ViDos(e:MouseEvent):void{
+	btnCerrar.visible = true;
+	btnLimpiar.visible = true;
+	btnResul.visible = true;
+	fondo.visible = true;
+	txtTitulo.visible = true;
+	txtTitulo.text = "Initial velocity formula:";
+	txtFormula.visible = true;
+	txtFormula.text = "Vi=√((Vf^2)-(2ad))";
+	var1.visible = true;
+	var1.text = "Vf=";
+	var2.visible = true;
+	var2.text = "a=";
+	var3.visible = true;
+	var3.text = "d=";
+	txt1.visible = true;
+	txt2.visible = true;
+	txt3.visible = true;
+	fondo1.visible = true;
+	fondo2.visible = true;
+	fondo3.visible = true;
+	form="viDos";
+}
+
+function VfUno(e:MouseEvent):void{
+	btnCerrar.visible = true;
+	btnLimpiar.visible = true;
+	btnResul.visible = true;
+	fondo.visible = true;
+	txtTitulo.visible = true;
+	txtTitulo.text = "Final velocity formula:";
+	txtFormula.visible = true;
+	txtFormula.text = "Vf= Vi + at";
+	var1.visible = true;
+	var1.text = "Vi=";
+	var2.visible = true;
+	var2.text = "a=";
+	var3.visible = true;
+	var3.text = "t=";
+	txt1.visible = true;
+	txt2.visible = true;
+	txt3.visible = true;
+	fondo1.visible = true;
+	fondo2.visible = true;
+	fondo3.visible = true;
+	form="vfUno";
+}
+
+function VfDos(e:MouseEvent):void{
+	btnCerrar.visible = true;
+	btnLimpiar.visible = true;
+	btnResul.visible = true;
+	fondo.visible = true;
+	txtTitulo.visible = true;
+	txtTitulo.text = "Final velocity formula:";
+	txtFormula.visible = true;
+	txtFormula.text = "Vf= √((Vi^2)+(2ad))";
+	var1.visible = true;
+	var1.text = "Vi=";
+	var2.visible = true;
+	var2.text = "a=";
+	var3.visible = true;
+	var3.text = "d=";
+	txt1.visible = true;
+	txt2.visible = true;
+	txt3.visible = true;
+	fondo1.visible = true;
+	fondo2.visible = true;
+	fondo3.visible = true;
+	form="vfDos";
+}
+
+function AUno(e:MouseEvent):void{
+	btnCerrar.visible = true;
+	btnLimpiar.visible = true;
+	btnResul.visible = true;
+	fondo.visible = true;
+	txtTitulo.visible = true;
+	txtTitulo.text = "Acceleration formula:";
+	txtFormula.visible = true;
+	txtFormula.text = "a= (Vf-Vi)/t";
+	var1.visible = true;
+	var1.text = "Vf=";
+	var2.visible = true;
+	var2.text = "Vi=";
+	var3.visible = true;
+	var3.text = "t=";
+	txt1.visible = true;
+	txt2.visible = true;
+	txt3.visible = true;
+	fondo1.visible = true;
+	fondo2.visible = true;
+	fondo3.visible = true;
+	form="AUno";
+}
+
+function ADos(e:MouseEvent):void{
+	btnCerrar.visible = true;
+	btnLimpiar.visible = true;
+	btnResul.visible = true;
+	fondo.visible = true;
+	txtTitulo.visible = true;
+	txtTitulo.text = "Acceleration formula:";
+	txtFormula.visible = true;
+	txtFormula.text = "a= ((Vf^2)-(Vi^2))/(2d)";
+	var1.visible = true;
+	var1.text = "Vf=";
+	var2.visible = true;
+	var2.text = "Vi=";
+	var3.visible = true;
+	var3.text = "d=";
+	txt1.visible = true;
+	txt2.visible = true;
+	txt3.visible = true;
+	fondo1.visible = true;
+	fondo2.visible = true;
+	fondo3.visible = true;
+	form="ADos";
+}
+
+function DUno(e:MouseEvent):void{
+	btnCerrar.visible = true;
+	btnLimpiar.visible = true;
+	btnResul.visible = true;
+	fondo.visible = true;
+	txtTitulo.visible = true;
+	txtTitulo.text = "Distance formula:";
+	txtFormula.visible = true;
+	txtFormula.text = "d= ((Vf^2)-(Vi^2))/(2a)";
+	var1.visible = true;
+	var1.text = "Vf=";
+	var2.visible = true;
+	var2.text = "Vi=";
+	var3.visible = true;
+	var3.text = "a=";
+	txt1.visible = true;
+	txt2.visible = true;
+	txt3.visible = true;
+	fondo1.visible = true;
+	fondo2.visible = true;
+	fondo3.visible = true;
+	form="DUno";
+}
+
+function DDos(e:MouseEvent):void{
+	btnCerrar.visible = true;
+	btnLimpiar.visible = true;
+	btnResul.visible = true;
+	fondo.visible = true;
+	txtTitulo.visible = true;
+	txtTitulo.text = "Distance formula:";
+	txtFormula.visible = true;
+	txtFormula.text = "d=(Vit)+(1/2a(t^2))";
+	var1.visible = true;
+	var1.text = "Vi=";
+	var2.visible = true;
+	var2.text = "t=";
+	var3.visible = true;
+	var3.text = "a=";
+	txt1.visible = true;
+	txt2.visible = true;
+	txt3.visible = true;
+	fondo1.visible = true;
+	fondo2.visible = true;
+	fondo3.visible = true;
+	form="DDos";
+}
+
+
+
+
+//=======================================================================================0
+function close(e:MouseEvent):void{
+	hidee();
+}
+function closeFormulas(e:MouseEvent):void{
+	hidee();
+}
+//============================================
+function hidee():void{
+	btnCerrar.visible = false;
+	btnLimpiar.visible = false;
+	btnResul.visible = false;
+	fondo.visible = false;
+	txtTitulo.visible = false;
+	txtFormula.visible = false;
+	var1.visible = false;
+	var2.visible = false;
+	var3.visible = false;
+	var4.visible = false;
+	var5.visible = false;
+	txt1.visible = false;
+	txt2.visible = false;
+	txt3.visible = false;
+	txt4.visible = false;
+	txt5.visible = false;
+	fondo1.visible = false;
+	fondo2.visible = false;
+	fondo3.visible = false;
+	fondo4.visible = false;
+	fondo5.visible = false;
+	txtvf.visible = false;
+	txtvf2.visible = false;
+	txta.visible = false;
+	txtt.visible = false;
+	txtat.visible = false;
+	txtresul.visible = false;
+	txtsViUno.visible = false;
+	txtsViDos.visible= false;
+	cleann();
+	vf.visible = false;
+	a.visible = false;
+	d.visible = false;
+	ad.visible = false;
+	ad2.visible = false;
+	vf2.visible = false;
+	vf22.visible = false;
+	vf2ad.visible = false;
+	fin.visible = false;
+	backFormulas.visible = false;
+	TitleFormulas.visible = false;
+	TitlesFormulas.visible = false;
+	btnCloseFormulas.visible = false;
+	btnSelectVi.visible = false;
+	btnSelectVf.visible = false;
+	btnSelectA.visible = false;
+	btnSelectD.visible = false;
+	txtsVfUno.visible = false;
+	VfUnoVi.visible = false;
+	VfUnoA.visible = false;
+	VfUnoT.visible = false;
+	VfUnoVi2.visible = false;
+	VfUnoAT.visible = false;
+	VfUnoFin.visible = false;
+	txtsVfDos.visible = false;
+	VfDosVi.visible = false;
+	VfDosA.visible = false;
+	VfDosD.visible = false;
+	VfDosViCuad.visible = false;
+	VfDosAD.visible = false;
+	VfDosViCuad2.visible = false;
+	VfDos2AD.visible = false;
+	VfDosCasi.visible = false;
+	VfDosFinal.visible = false;
+	txtsAUno.visible = false;
+	AUnoVf.visible = false;
+	AUnoVi.visible = false;
+	AUnoT.visible = false;
+	AUnoVfVi.visible = false;
+	AUnoT2.visible = false;
+	AUnoFin.visible = false;
+	txtsADos.visible = false;
+	ADosVf.visible = false;
+	ADosVi.visible = false;
+	ADosD.visible = false;
+	ADosVfCuad.visible = false;
+	ADosViCuad.visible = false;
+	ADos2D.visible = false;
+	ADosVfVi.visible = false;
+	ADos2D2.visible = false;
+	ADosFin.visible = false;
+	txtsDUno.visible = false;
+	DUnoVf.visible = false;
+	DUnoVi.visible = false;
+	DUnoA.visible = false;
+	DUnoVfCuad.visible = false;
+	DUnoViCuad.visible = false;
+	DUno2A.visible = false;
+	DUnoVfVi.visible = false;
+	DUno2A2.visible = false;
+	DUnoFin.visible = false;
+	txtsDDos.visible = false;
+	DDosVi.visible = false;
+	DDosT1.visible = false;
+	DDosA.visible = false;
+	DDosT.visible = false;
+	DDosViT.visible = false;
+	DDosA2.visible = false;
+	DDosTCuad.visible = false;
+	DDosViT2.visible = false;
+	DDosMedioAT.visible = false;
+	DDosFin.visible = false;
+}
+//=============================================================================================
+
+
+
+function resulta(e:MouseEvent):void{
+	
+	switch (form){
+		case "viUno":
+			
+				txtsViUno.visible = true;
+				txtvf.visible = true;
+				txtvf2.visible = true;
+				txta.visible = true;
+				txtt.visible = true;
+				txtat.visible = true;
+				txtresul.visible = true;
+				txtvf.text = String(Number(txt1.text));
+				txtvf2.text = String(Number(txt1.text));
+				txta.text = String(Number(txt2.text));
+				txtt.text = String(Number(txt3.text));
+
+				var multi : Number = ((Number(txt2.text))*(Number(txt3.text)));
+				txtat.text = String(multi);
+				
+				var resu : Number = ((Number(txt1.text))-(Number(multi)))
+				txtresul.text = String(Number(resu));
+		break;
+		case "viDos":
+				txtsViDos.visible= true;
+				vf.visible = true;
+				a.visible = true;
+				d.visible = true;
+				ad.visible = true;
+				ad2.visible = true;
+				vf2.visible = true;
+				vf22.visible = true;
+				vf2ad.visible = true;
+				fin.visible = true;
+				vf.text = String(Number(txt1.text));
+				a.text = String(Number(txt2.text));
+				d.text = String(Number(txt3.text));
+				var multip : Number = ((Number(txt2.text))*(Number(txt3.text)));
+				ad.text = String(multip);
+				var mult2 : Number = multip*2;
+				ad2.text = String(mult2);
+				var vfC : Number = ((Number(txt1.text))*(Number(txt1.text)));
+				vf2.text = String(vfC);
+				vf22.text = String(vfC);
+				var rest : Number = (vfC-mult2);
+				vf2ad.text = String(rest);
+				var re : Number = (Math.sqrt(rest));
+				fin.text = String(re);
+		break;
+		case "vfUno":
+				txtsVfUno.visible= true;
+				VfUnoVi.visible= true;
+				VfUnoA.visible= true;
+				VfUnoT.visible= true;
+				VfUnoVi2.visible= true;
+				VfUnoAT.visible= true;
+				VfUnoFin.visible= true;
+				
+				VfUnoVi.text = String(Number(txt1.text));
+				VfUnoVi2.text = String(Number(txt1.text));
+				VfUnoA.text = String(Number(txt2.text));
+				VfUnoT.text = String(Number(txt3.text));
+				VfUnoAT.text = String(((Number(txt2.text))*(Number(txt3.text))));
+				VfUnoFin.text = String((Number(txt1.text))+Number(VfUnoAT.text));
+		break;
+		case "vfDos":
+				txtsVfDos.visible= true;
+				VfDosVi.visible= true;
+				VfDosA.visible= true;
+				VfDosD.visible= true;
+				VfDosViCuad.visible= true;
+				VfDosAD.visible= true;
+				VfDosViCuad2.visible= true;
+				VfDos2AD.visible= true;
+				VfDosCasi.visible= true;
+				VfDosFinal.visible= true;
+		
+				VfDosVi.text = String(Number(txt1.text));
+				VfDosA.text = String(Number(txt2.text));
+				VfDosD.text = String(Number(txt3.text));
+				VfDosViCuad.text = String((Number(txt1.text))*(Number(txt1.text)));
+			var mul : Number = (Number(txt2.text))*(Number(txt3.text));
+				VfDosAD.text = String(mul);
+				VfDosViCuad2.text = VfDosViCuad.text;
+				VfDos2AD.text = String(2*mul);
+				VfDosCasi.text = String((Number(VfDosViCuad2.text))+(Number(VfDos2AD.text)));
+				VfDosFinal.text = String(Math.sqrt(Number(VfDosCasi.text)));
+		break;
+		case "AUno":
+				txtsAUno.visible= true;
+				AUnoVf.visible= true;
+				AUnoVi.visible= true;
+				AUnoT.visible= true;
+				AUnoVfVi.visible= true;
+				AUnoT2.visible= true;
+				AUnoFin.visible= true;
+				
+				AUnoVf.text = String(Number(txt1.text));
+				AUnoVi.text = String(Number(txt2.text));
+				AUnoT.text = String(Number(txt3.text));
+				AUnoVfVi.text = String((Number(txt1.text)-Number(txt2.text)));
+				AUnoT2.text = AUnoT.text;
+				AUnoFin.text = String((Number(AUnoVfVi.text))/(Number(AUnoT.text)));
+		break;
+		case "ADos":
+				txtsADos.visible= true;
+				ADosVf.visible= true;
+				ADosVi.visible= true;
+				ADosD.visible= true;
+				ADosVfCuad.visible= true;
+				ADosViCuad.visible= true;
+				ADos2D.visible= true;
+				ADosVfVi.visible= true;
+				ADos2D2.visible= true;
+				ADosFin.visible= true;
+		
+				ADosVf.text = String(Number(txt1.text));
+				ADosVi.text = String(Number(txt2.text));
+				ADosD.text = String(Number(txt3.text));
+				ADosVfCuad.text = String(Math.pow(Number(txt1.text),2));
+				ADosViCuad.text = String(Math.pow(Number(txt2.text),2));
+				ADos2D.text = String(Number(2*(Number(txt3.text))));
+				ADosVfVi.text = String((Number(ADosVfCuad.text))-(Number(ADosViCuad.text)));
+				ADos2D2.text = ADos2D.text;
+				ADosFin.text = String(Number((Number(ADosVfVi.text))/(Number(ADos2D.text))));
+		break;
+		case "DUno":
+				txtsDUno.visible= true;
+				DUnoVf.visible= true;
+				DUnoVi.visible= true;
+				DUnoA.visible= true;
+				DUnoVfCuad.visible= true;
+				DUnoViCuad.visible= true;
+				DUno2A.visible= true;
+				DUnoVfVi.visible= true;
+				DUno2A2.visible= true;
+				DUnoFin.visible= true;
+		
+				DUnoVf.text = String(Number(txt1.text));
+				DUnoVi.text = String(Number(txt2.text));
+				DUnoA.text = String(Number(txt3.text));
+				DUnoVfCuad.text = String(Number(Math.pow(Number(DUnoVf.text),2)));
+				DUnoViCuad.text = String(Number(Math.pow(Number(DUnoVi.text),2)));
+				DUno2A.text = String(Number(2*(Number(DUnoA.text))));
+				DUnoVfVi.text = String((Number(DUnoVfCuad.text))-(Number(DUnoViCuad.text)));
+				DUno2A2.text = DUno2A.text;
+				DUnoFin.text = String((Number(DUnoVfVi.text))/(Number(DUno2A.text)));
+		break;
+		case "DDos":
+				txtsDDos.visible= true;
+				DDosVi.visible= true;
+				DDosT1.visible= true;
+				DDosA.visible= true;
+				DDosT.visible= true;
+				DDosViT.visible= true;
+				DDosA2.visible= true;
+				DDosTCuad.visible= true;
+				DDosViT2.visible= true;
+				DDosMedioAT.visible= true;
+				DDosFin.visible= true;
+		
+				DDosVi.text = String(Number(txt1.text));
+				DDosT1.text = String(Number(txt2.text));
+				DDosA.text = String(Number(txt3.text));
+				DDosT.text = String(Number(txt2.text));
+				DDosViT.text = String((Number(DDosVi.text))*(Number(DDosT1.text)));
+				DDosA2.text = DDosA.text;
+				DDosTCuad.text = String(Number(Math.pow((Number(DDosT.text)),2)));
+				DDosViT2.text = DDosViT.text;
+				DDosMedioAT.text = String(Number(0.5*(Number(DDosA.text))*(Number(DDosTCuad.text))));
+				DDosFin.text = String(Number((Number(DDosViT.text))+(Number(DDosMedioAT.text))));
+		break;
+	}
+	
+	
+}
+
+function clean (e:MouseEvent):void{
+	cleann();
+}
+
+function cleann(){
+	txt1.text = "";
+	txt2.text = "";
+	txt3.text = "";
+	txt4.text = "";
+	txt5.text = "";
+	txtvf.text = "";
+	txtvf2.text = "";
+	txta.text = "";
+	txtt.text = "";
+	txtat.text = "";
+	txtresul.text = "";
+	txtsViUno.visible = false;
+	txtsViDos.visible= false;
+	vf.text = "";
+	a.text = "";
+	d.text = "";
+	vf2.text = "";
+	ad.text = "";
+	vf22.text = "";
+	ad2.text = "";
+	vf2ad.text = "";
+	fin.text = "";
+	VfUnoVi.text = "";
+	VfUnoA.text = "";
+	VfUnoT.text = "";
+	VfUnoVi2.text = "";
+	VfUnoAT.text = "";
+	VfUnoFin.text = "";
+	VfDosVi.text = "";
+	VfDosA.text = "";
+	VfDosD.text = "";
+	VfDosViCuad.text = "";
+	VfDosAD.text = "";
+	VfDosViCuad2.text = "";
+	VfDos2AD.text = "";
+	VfDosCasi.text = "";
+	VfDosFinal.text = "";
+	txtsVfDos.visible = false;
+	txtsVfUno.visible = false;
+	AUnoVf.text = "";
+	AUnoVi.text = "";
+	AUnoT.text = "";
+	AUnoVfVi.text = "";
+	AUnoT2.text = "";
+	AUnoFin.text = "";
+	txtsAUno.visible = false;
+	txtsADos.visible = false;
+	ADosVf.text = "";
+	ADosVi.text = "";
+	ADosD.text = "";
+	ADosVfCuad.text = "";
+	ADosViCuad.text = "";
+	ADos2D.text = "";
+	ADosVfVi.text = "";
+	ADos2D2.text = "";
+	ADosFin.text = "";
+	DUnoVf.text = "";
+	DUnoVi.text = "";
+	DUnoA.text = "";
+	DUnoVfCuad.text = "";
+	DUnoViCuad.text = "";
+	DUno2A.text = "";
+	DUnoVfVi.text = "";
+	DUno2A2.text = "";
+	DUnoFin.text = "";
+	txtsDUno.visible = false;
+	txtsDDos.visible = false;
+	DDosVi.text = "";
+	DDosT1.text = "";
+	DDosA.text = "";
+	DDosT.text = "";
+	DDosViT.text = "";
+	DDosA2.text = "";
+	DDosTCuad.text = "";
+	DDosViT2.text = "";
+	DDosMedioAT.text = "";
+	DDosFin.text = "";
+}
+
+
+

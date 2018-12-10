@@ -1,0 +1,1244 @@
+import flash.events.MouseEvent;
+import flash.sampler.StackFrame;
+
+stop();
+
+
+
+btnWeight1.addEventListener(MouseEvent.CLICK,kilo);
+btnWeight2.addEventListener(MouseEvent.CLICK,gramo);
+btnWeight3.addEventListener(MouseEvent.CLICK,tonelada);
+btnWeight4.addEventListener(MouseEvent.CLICK,libra);
+btnWeight5.addEventListener(MouseEvent.CLICK,onza);
+btnWeight6.addEventListener(MouseEvent.CLICK,kilo2);
+btnWeight7.addEventListener(MouseEvent.CLICK,gramo2);
+btnWeight8.addEventListener(MouseEvent.CLICK,tonelada2);
+btnWeight9.addEventListener(MouseEvent.CLICK,libra2);
+btnWeight10.addEventListener(MouseEvent.CLICK,onza2);
+btnOriginal.addEventListener(MouseEvent.CLICK,Original);
+btnConverted.addEventListener(MouseEvent.CLICK,Converted);
+btnCloseOriginal.addEventListener(MouseEvent.CLICK,CloseOriginal);
+btnCloseConverted.addEventListener(MouseEvent.CLICK,CloseConverted);
+btnEject.addEventListener(MouseEvent.CLICK,Eject);
+btnChangeConver.addEventListener(MouseEvent.CLICK,change);
+btnCloseChange.addEventListener(MouseEvent.CLICK,closeChange);
+btnChangeP.addEventListener(MouseEvent.CLICK,weight);
+btnChangeL.addEventListener(MouseEvent.CLICK,len);
+btnChangeV.addEventListener(MouseEvent.CLICK,speed);
+btnChangeT.addEventListener(MouseEvent.CLICK,dataSize);
+btnLongOr.addEventListener(MouseEvent.CLICK,longOr);
+btnLongCon.addEventListener(MouseEvent.CLICK,longCon);
+btnCloseLen.addEventListener(MouseEvent.CLICK,Closelen);
+btnLenMi.addEventListener(MouseEvent.CLICK,milimetro);
+btnLenCe.addEventListener(MouseEvent.CLICK,centimetro);
+btnLenMe.addEventListener(MouseEvent.CLICK,metro);
+btnLenKi.addEventListener(MouseEvent.CLICK,kilometro);
+btnLenYa.addEventListener(MouseEvent.CLICK,yarda);
+btnLenPi.addEventListener(MouseEvent.CLICK,pie);
+btnLenPu.addEventListener(MouseEvent.CLICK,pulgada);
+btnCloseLenC.addEventListener(MouseEvent.CLICK,closeLenC);
+btnLenMi2.addEventListener(MouseEvent.CLICK,mi2);
+btnLenCe2.addEventListener(MouseEvent.CLICK,ce2);
+btnLenMe2.addEventListener(MouseEvent.CLICK,me2);
+btnLenKi2.addEventListener(MouseEvent.CLICK,ki2);
+btnLenYa2.addEventListener(MouseEvent.CLICK,ya2);
+btnLenPi2.addEventListener(MouseEvent.CLICK,pi2);
+btnLenPu2.addEventListener(MouseEvent.CLICK,pu2);
+btnSpeedOr.addEventListener(MouseEvent.CLICK,SpeedOr);
+btnSpeedCon.addEventListener(MouseEvent.CLICK,SpeedCon);
+btnCloseSpeedOr.addEventListener(MouseEvent.CLICK,closeSpeedOr);
+btnSpeedMH.addEventListener(MouseEvent.CLICK,MH);
+btnSpeedPS.addEventListener(MouseEvent.CLICK,PS);
+btnSpeedMS.addEventListener(MouseEvent.CLICK,MS);
+btnSpeedKH.addEventListener(MouseEvent.CLICK,KH);
+btnSpeedN.addEventListener(MouseEvent.CLICK,N);
+btnCloseSpeedCon.addEventListener(MouseEvent.CLICK,closeSpeedCon);
+btnSpeedMH2.addEventListener(MouseEvent.CLICK,MH2);
+btnSpeedPS2.addEventListener(MouseEvent.CLICK,PS2);
+btnSpeedMS2.addEventListener(MouseEvent.CLICK,MS2);
+btnSpeedKH2.addEventListener(MouseEvent.CLICK,KH2);
+btnSpeedN2.addEventListener(MouseEvent.CLICK,N2);
+btnSizeOr.addEventListener(MouseEvent.CLICK,SizeOr);
+btnSizeCon.addEventListener(MouseEvent.CLICK,SizeCon);
+closeSizeOr.addEventListener(MouseEvent.CLICK,closeSizeOrg);
+btnSize1.addEventListener(MouseEvent.CLICK,Size1);
+btnSize2.addEventListener(MouseEvent.CLICK,Size2);
+btnSize3.addEventListener(MouseEvent.CLICK,Size3);
+btnSize4.addEventListener(MouseEvent.CLICK,Size4);
+btnSize5.addEventListener(MouseEvent.CLICK,Size5);
+btnSize6.addEventListener(MouseEvent.CLICK,Size6);
+closeSizeCon.addEventListener(MouseEvent.CLICK,closeSizeConv);
+btnSize7.addEventListener(MouseEvent.CLICK,Size7);
+btnSize8.addEventListener(MouseEvent.CLICK,Size8);
+btnSize9.addEventListener(MouseEvent.CLICK,Size9);
+btnSize10.addEventListener(MouseEvent.CLICK,Size10);
+btnSize11.addEventListener(MouseEvent.CLICK,Size11);
+btnSize12.addEventListener(MouseEvent.CLICK,Size12);
+
+
+btnOriginal.visible = true;
+btnConverted.visible = true;
+btnLongOr.visible = false;
+btnLongCon.visible = false;
+btnSpeedOr.visible = false;
+btnSpeedCon.visible = false;
+btnSizeOr.visible = false;
+btnSizeCon.visible = false;
+
+function hide():void{
+	btnCloseOriginal.visible = false;
+	titleWeight.visible = false;
+	titlesWeight.visible = false;
+	btnWeight1.visible = false;
+	btnWeight2.visible = false;
+	btnWeight3.visible = false;
+	btnWeight4.visible = false;
+	btnWeight5.visible = false;
+	backConverted.visible = false;
+	btnCloseConverted.visible = false;
+	titleConverted.visible = false;
+	titlesConverted.visible = false;
+	btnWeight6.visible = false;
+	btnWeight7.visible = false;
+	btnWeight8.visible = false;
+	btnWeight9.visible = false;
+	btnWeight10.visible = false;
+	backOriginal.visible = false;
+	backConverted.visible = false;
+	backChange.visible = false;
+	ChangeTitles.visible = false;
+	ChangeTitle.visible = false;
+	btnChangeP.visible = false;
+	btnChangeL.visible = false;
+	btnChangeV.visible = false;
+	btnChangeT.visible = false;
+	btnCloseChange.visible = false;
+	backLengthOr.visible = false;
+	lengthTitle.visible = false;
+	lengthTitles.visible = false;
+	btnCloseLen.visible = false;
+	btnLenMi.visible = false;
+	btnLenCe.visible = false;
+	btnLenMe.visible = false;
+	btnLenKi.visible = false;
+	btnLenYa.visible = false;
+	btnLenPi.visible = false;
+	btnLenPu.visible = false;
+	backLengthCon.visible = false;
+	lengthTitle2.visible = false;
+	lengthTitles2.visible = false;
+	btnCloseLenC.visible = false;
+	btnLenMi2.visible = false;
+	btnLenCe2.visible = false;
+	btnLenMe2.visible = false;
+	btnLenKi2.visible = false;
+	btnLenYa2.visible = false;
+	btnLenPi2.visible = false;
+	btnLenPu2.visible = false;
+	//btnLongOr.visible = false;
+	//btnLongCon.visible = false;
+	//btnSpeedOr.visible = false;
+	//btnSpeedCon.visible = false;
+	
+	backSpeedOr.visible = false;
+	SpeedTitleOr.visible = false;
+	SpeedTitlesOr.visible = false;
+	btnCloseSpeedOr.visible = false;
+	btnSpeedMH.visible = false;
+	btnSpeedPS.visible = false;
+	btnSpeedMS.visible = false;
+	btnSpeedKH.visible = false;
+	btnSpeedN.visible = false;
+	backSpeedCon.visible = false;
+	SpeedTitleCon.visible = false;
+	SpeedTitlesCon.visible = false;
+	btnCloseSpeedCon.visible = false;
+	btnSpeedMH2.visible = false;
+	btnSpeedPS2.visible = false;
+	btnSpeedMS2.visible = false;
+	btnSpeedKH2.visible = false;
+	btnSpeedN2.visible = false;
+	
+	backSizeOr.visible = false;
+	SizeTitleOr.visible = false;
+	SizeTitlesOr.visible = false;
+	closeSizeOr.visible = false;
+	btnSize1.visible = false;
+	btnSize2.visible = false;
+	btnSize3.visible = false;
+	btnSize4.visible = false;
+	btnSize5.visible = false;
+	btnSize6.visible = false;
+	
+	backSizeCon.visible = false;
+	SizeTitleCon.visible = false;
+	SizeTitlesCon.visible = false;
+	closeSizeCon.visible = false;
+	btnSize7.visible = false;
+	btnSize8.visible = false;
+	btnSize9.visible = false;
+	btnSize10.visible = false;
+	btnSize11.visible = false;
+	btnSize12.visible = false;
+}
+
+	hide();
+
+//==========================================================================================
+txtOriginal.text = "Select:";
+txtConverted.text = "Select:";
+var ident : String = "";
+var ident2 : String = "";
+var ident3 : String = "";
+var ident4 : String = "";
+var ident5 : String = "";
+var ident6 : String = "";
+var ident7 : String	= "";
+var ident8 : String = "";
+
+
+var banWeight : Boolean = true;
+var banLength : Boolean = false;
+var banSpeed : Boolean = false;
+var banSize : Boolean = false;
+//==========================================================================================
+	 
+function kilo(e:MouseEvent):void{
+	ident = "k";
+	txtOriginal.text = "Kilogram:";
+	hide();
+}
+function gramo(e:MouseEvent):void{
+	ident = "g";
+	txtOriginal.text = "Gram:";
+	hide();
+}
+function tonelada(e:MouseEvent):void{
+	ident = "t";
+	txtOriginal.text = "Ton:";
+	hide();
+}
+function libra(e:MouseEvent):void{
+	ident = "l";
+	txtOriginal.text = "Pound:";
+	hide();
+}
+function onza(e:MouseEvent):void{
+	ident = "o";
+	txtOriginal.text = "Ounce:";
+	hide();
+}
+//==========================================
+function kilo2(e:MouseEvent):void{
+	ident2 = "k";
+	txtConverted.text = "Kilogram:";
+	hide();
+}
+function gramo2(e:MouseEvent):void{
+	ident2 = "g";
+	txtConverted.text = "Gram:";
+	hide();
+}
+function tonelada2(e:MouseEvent):void{
+	ident2 = "t";
+	txtConverted.text = "Ton:";
+	hide();
+}
+function libra2(e:MouseEvent):void{
+	ident2 = "l";
+	txtConverted.text = "Pound:";
+	hide();
+}
+function onza2(e:MouseEvent):void{
+	ident2 = "o";
+	txtConverted.text = "Ounce:";
+	hide();
+}
+//==========================================
+function milimetro(e:MouseEvent):void{
+	ident3 = "mi";
+	txtOriginal.text = "Milimeter:";
+	hide();
+}
+function centimetro(e:MouseEvent):void{
+	ident3 = "ce";
+	txtOriginal.text = "Centimeter:";
+	hide();
+}
+function metro(e:MouseEvent):void{
+	ident3 = "me";
+	txtOriginal.text = "Meter:";
+	hide();
+}
+function kilometro(e:MouseEvent):void{
+	ident3 = "ki";
+	txtOriginal.text = "Kilometer:";
+	hide();
+}
+function yarda(e:MouseEvent):void{
+	ident3 = "ya";
+	txtOriginal.text = "Yard:";
+	hide();
+}
+function pie(e:MouseEvent):void{
+	ident3 = "pi";
+	txtOriginal.text = "Foot:";
+	hide();
+}
+function pulgada(e:MouseEvent):void{
+	ident3 = "pu";
+	txtOriginal.text = "Inch:";
+	hide();
+}
+//==========================================
+function mi2(e:MouseEvent):void{
+	ident4 = "mi";
+	txtConverted.text = "Milimeter:";
+	hide();
+}
+function ce2(e:MouseEvent):void{
+	ident4 = "ce";
+	txtConverted.text = "Centimeter:";
+	hide();
+}
+function me2(e:MouseEvent):void{
+	ident4 = "me";
+	txtConverted.text = "Meter:";
+	hide();
+}
+function ki2(e:MouseEvent):void{
+	ident4 = "ki";
+	txtConverted.text = "Kilometer:";
+	hide();
+}
+function ya2(e:MouseEvent):void{
+	ident4 = "ya";
+	txtConverted.text = "Yard:";
+	hide();
+}
+function pi2(e:MouseEvent):void{
+	ident4 = "pi";
+	txtConverted.text = "Foot:";
+	hide();
+}
+function pu2(e:MouseEvent):void{
+	ident4 = "pu";
+	txtConverted.text = "Inch:";
+	hide();
+}
+//==========================================
+
+function MH(e:MouseEvent):void{
+	ident5 = "mh";
+	txtOriginal.text = "Mile per hour:";
+	hide();
+}
+function PS(e:MouseEvent):void{
+	ident5 = "ps";
+	txtOriginal.text = "Foot per second:";
+	hide();
+}
+function MS(e:MouseEvent):void{
+	ident5 = "ms";
+	txtOriginal.text = "Meter per second:";
+	hide();
+}
+function KH(e:MouseEvent):void{
+	ident5 = "kh";
+	txtOriginal.text = "Kilometer per hour:";
+	hide();
+}
+function N(e:MouseEvent):void{
+	ident5 = "n";
+	txtOriginal.text = "Knot:";
+	hide();
+}
+//==========================================
+
+function MH2(e:MouseEvent):void{
+	ident6 = "mh";
+	txtConverted.text = "Mile per hour";
+	hide();
+}
+function PS2(e:MouseEvent):void{
+	ident6 = "ps";
+	txtConverted.text = "Foot per second";
+	hide();
+}
+function MS2(e:MouseEvent):void{
+	ident6 = "ms";
+	txtConverted.text = "Meter per second";
+	hide();
+}
+function KH2(e:MouseEvent):void{
+	ident6 = "kh";
+	txtConverted.text = "Kilometer per hour";
+	hide();
+}
+function N2(e:MouseEvent):void{
+	ident6 = "n";
+	txtConverted.text = "Knot";
+	hide();
+}
+//==========================================
+function Size1(e:MouseEvent):void{
+	ident7 = "bi";
+	txtOriginal.text = "Bit:";
+	hide();
+}
+function Size2(e:MouseEvent):void{
+	ident7 = "by";
+	txtOriginal.text = "Byte:";
+	hide();
+}
+function Size3(e:MouseEvent):void{
+	ident7 = "kb";
+	txtOriginal.text = "Kilobyte:";
+	hide();
+}
+function Size4(e:MouseEvent):void{
+	ident7 = "mb";
+	txtOriginal.text = "Megabyte:";
+	hide();
+}
+function Size5(e:MouseEvent):void{
+	ident7 = "gb";
+	txtOriginal.text = "Gigabyte:";
+	hide();
+}
+function Size6(e:MouseEvent):void{
+	ident7 = "tb";
+	txtOriginal.text = "Terabyte:";
+	hide();
+}
+
+//==========================================
+function Size7(e:MouseEvent):void{
+	ident8 = "bi";
+	txtConverted.text = "Bit:";
+	hide();
+}
+function Size8(e:MouseEvent):void{
+	ident8 = "by";
+	txtConverted.text = "Byte:";
+	hide();
+}
+function Size9(e:MouseEvent):void{
+	ident8 = "kb";
+	txtConverted.text = "Kilobyte:";
+	hide();
+}
+function Size10(e:MouseEvent):void{
+	ident8 = "mb";
+	txtConverted.text = "Megabyte:";
+	hide();
+}
+function Size11(e:MouseEvent):void{
+	ident8 = "gb";
+	txtConverted.text = "Gigabyte:";
+	hide();
+}
+function Size12(e:MouseEvent):void{
+	ident8 = "tb";
+	txtConverted.text = "Terabyte:";
+	hide();
+}
+//==========================================
+
+function weight(e:MouseEvent):void{
+	btnOriginal.visible = true;
+	btnConverted.visible = true;
+	btnLongOr.visible = false;
+	btnLongCon.visible = false;
+	btnSpeedOr.visible = false;
+	btnSpeedCon.visible = false;
+	btnSizeOr.visible = false;
+	btnSizeCon.visible = false;
+	ident = "";
+	ident2 = "";
+	ident3 = "";
+	ident4 = "";
+	ident5 = "";
+	ident6 = "";
+	txtConver.text = "Weight.";
+	txtOriginal.text = "Select:";
+	txtConverted.text = "Select:";
+	hide();
+	banWeight = true;
+	banLength = false;
+	banSpeed = false;
+	banSize = false;
+}
+function len(e:MouseEvent):void{
+	btnOriginal.visible = false;
+	btnConverted.visible = false;
+	btnLongOr.visible = true;
+	btnLongCon.visible = true;
+	btnSpeedOr.visible = false;
+	btnSpeedCon.visible = false;
+	btnSizeOr.visible = false;
+	btnSizeCon.visible = false;
+	ident = "";
+	ident2 = "";
+	ident3 = "";
+	ident4 = "";
+	ident5 = "";
+	ident6 = "";
+	txtConver.text = "Length.";
+	txtOriginal.text = "Select:";
+	txtConverted.text = "Select:";
+	hide();
+	banWeight = false;
+	banLength = true;
+	banSpeed = false;
+	banSize = false;
+}
+
+function speed(e:MouseEvent):void{
+	btnOriginal.visible = false;
+	btnConverted.visible = false;
+	btnLongOr.visible = false;
+	btnLongCon.visible = false;
+	btnSpeedOr.visible = true;
+	btnSpeedCon.visible = true;
+	btnSizeOr.visible = false;
+	btnSizeCon.visible = false;
+	ident = "";
+	ident2 = "";
+	ident3 = "";
+	ident4 = "";
+	ident5 = "";
+	ident6 = "";
+	txtConver.text = "Speed.";
+	txtOriginal.text = "Select:";
+	txtConverted.text = "Select:";
+	hide();
+	banWeight = false;
+	banLength = false;
+	banSpeed = true;
+	banSize = false;
+}
+
+
+function dataSize(e:MouseEvent):void{
+	btnOriginal.visible = false;
+	btnConverted.visible = false;
+	btnLongOr.visible = false;
+	btnLongCon.visible = false;
+	btnSpeedOr.visible = false;
+	btnSpeedCon.visible = false;
+	btnSizeOr.visible = true;
+	btnSizeCon.visible = true;
+	ident = "";
+	ident2 = "";
+	ident3 = "";
+	ident4 = "";
+	ident5 = "";
+	ident6 = "";
+	ident7 = "";
+	ident8 = "";
+	txtConver.text = "Size of data.";
+	txtOriginal.text = "Select:";
+	txtConverted.text = "Select:";
+	hide();
+	banWeight = false;
+	banLength = false;
+	banSpeed = false;
+	banSize = true;
+}
+
+//==========================================================================================
+function CloseOriginal(e:MouseEvent):void{
+	hide();
+}
+
+function CloseConverted(e:MouseEvent):void{
+	hide();
+}
+function closeChange(e:MouseEvent):void{
+	hide();
+}
+
+function Closelen(e:MouseEvent):void{
+	hide();
+}
+function closeLenC(e:MouseEvent):void{
+	hide();
+}
+function closeSpeedOr(e:MouseEvent):void{
+	hide();
+}
+
+function closeSpeedCon(e:MouseEvent):void{
+	hide();
+}
+
+function closeSizeOrg(e:MouseEvent):void{
+	hide();
+}
+
+function closeSizeConv(e:MouseEvent):void{
+	hide();
+}
+//==========================================================================================
+function Original(e:MouseEvent):void{
+	backOriginal.visible = true;
+	btnCloseOriginal.visible = true;
+	titleWeight.visible = true;
+	titlesWeight.visible = true;
+	btnWeight1.visible = true;
+	btnWeight2.visible = true;
+	btnWeight3.visible = true;
+	btnWeight4.visible = true;
+	btnWeight5.visible = true;
+}
+
+function Converted(e:MouseEvent):void{
+	backConverted.visible = true;
+	btnCloseConverted.visible = true;
+	titleConverted.visible = true;
+	titlesConverted.visible = true;
+	btnWeight6.visible = true;
+	btnWeight7.visible = true;
+	btnWeight8.visible = true;
+	btnWeight9.visible = true;
+	btnWeight10.visible = true;
+	txtDos.text="";
+}
+
+function longOr(e:MouseEvent):void{
+	backLengthOr.visible = true;
+	lengthTitle.visible = true;
+	lengthTitles.visible = true;
+	btnCloseLen.visible = true;
+	btnLenMi.visible = true;
+	btnLenCe.visible = true;
+	btnLenMe.visible = true;
+	btnLenKi.visible = true;
+	btnLenYa.visible = true;
+	btnLenPi.visible = true;
+	btnLenPu.visible = true;
+}
+
+function longCon(e:MouseEvent):void{
+	backLengthCon.visible = true;
+	lengthTitle2.visible = true;
+	lengthTitles2.visible = true;
+	btnCloseLenC.visible = true;
+	btnLenMi2.visible = true;
+	btnLenCe2.visible = true;
+	btnLenMe2.visible = true;
+	btnLenKi2.visible = true;
+	btnLenYa2.visible = true;
+	btnLenPi2.visible = true;
+	btnLenPu2.visible = true;
+	txtDos.text="";
+}
+
+function SpeedOr(e:MouseEvent):void{
+	backSpeedOr.visible = true;
+	SpeedTitleOr.visible = true;
+	SpeedTitlesOr.visible = true;
+	btnCloseSpeedOr.visible = true;
+	btnSpeedMH.visible = true;
+	btnSpeedPS.visible = true;
+	btnSpeedMS.visible = true;
+	btnSpeedKH.visible = true;
+	btnSpeedN.visible = true;
+}
+
+function SpeedCon(e:MouseEvent):void{
+	backSpeedCon.visible = true;
+	SpeedTitleCon.visible = true;
+	SpeedTitlesCon.visible = true;
+	btnCloseSpeedCon.visible = true;
+	btnSpeedMH2.visible = true;
+	btnSpeedPS2.visible = true;
+	btnSpeedMS2.visible = true;
+	btnSpeedKH2.visible = true;
+	btnSpeedN2.visible = true;
+	txtDos.text="";
+}
+
+function SizeOr(e:MouseEvent):void{
+	backSizeOr.visible = true;
+	SizeTitleOr.visible = true;
+	SizeTitlesOr.visible = true;
+	closeSizeOr.visible = true;
+	btnSize1.visible = true;
+	btnSize2.visible = true;
+	btnSize3.visible = true;
+	btnSize4.visible = true;
+	btnSize5.visible = true;
+	btnSize6.visible = true;
+}
+
+function SizeCon(e:MouseEvent):void{
+	backSizeCon.visible = true;
+	SizeTitleCon.visible = true;
+	SizeTitlesCon.visible = true;
+	closeSizeCon.visible = true;
+	btnSize7.visible = true;
+	btnSize8.visible = true;
+	btnSize9.visible = true;
+	btnSize10.visible = true;
+	btnSize11.visible = true;
+	btnSize12.visible = true;
+}
+
+
+
+function change(e:MouseEvent):void{
+	backChange.visible = true;
+	ChangeTitles.visible = true;
+	ChangeTitle.visible = true;
+	btnChangeP.visible = true;
+	btnChangeL.visible = true;
+	btnChangeV.visible = true;
+	btnChangeT.visible = true;
+	btnCloseChange.visible = true;
+	txtUno.text="";
+	txtDos.text="";
+}
+
+
+//==================================================================================
+
+function Eject(e:MouseEvent):void{
+	
+	
+// INICIA PESO
+	if(banWeight){
+	
+	switch(ident){
+		case "k":
+				switch(ident2){
+					case "k":
+						txtDos.text = txtUno.text;
+						break;
+					case "g":
+						txtDos.text = String((Number(txtUno.text))*1000);
+						break;
+					case "t":
+						txtDos.text = String((Number(txtUno.text))/1000);
+						break;
+					case "l":
+						txtDos.text = String((Number(txtUno.text))*2.20462);
+						break;
+					case "o":
+						txtDos.text = String((Number(txtUno.text))*35.274);
+						break;
+				}
+			break;
+		case "g":
+				switch(ident2){
+					case "k":
+						txtDos.text = String((Number(txtUno.text))/1000);
+						break;
+					case "g":
+						txtDos.text = txtUno.text;
+						break;
+					case "t":
+						txtDos.text = String((Number(txtUno.text))/(1000000));
+						break;
+					case "l":
+						txtDos.text = String((Number(txtUno.text))/453.592);
+						break;
+					case "o":
+						txtDos.text = String((Number(txtUno.text))/28.35);
+						break;
+				}
+			break;
+		case "t":
+				switch(ident2){
+					case "k":
+						txtDos.text = String((Number(txtUno.text))*1000);
+						break;
+					case "g":
+						txtDos.text = String((Number(txtUno.text))*1000000);
+						break;
+					case "t":
+						txtDos.text = txtUno.text;
+						break;
+					case "l":
+						txtDos.text = String((Number(txtUno.text))*2204.623);
+						break;
+					case "o":
+						txtDos.text = String((Number(txtUno.text))/28.35);
+						break;
+				}
+			break;
+		case "l":
+				switch(ident2){
+					case "k":
+						txtDos.text = String((Number(txtUno.text))/2.205);
+						break;
+					case "g":
+						txtDos.text = String((Number(txtUno.text))*453.592);
+						break;
+					case "t":
+						txtDos.text = String((Number(txtUno.text))/2204.623);
+						break;
+					case "l":
+						txtDos.text = txtUno.text;
+						break;
+					case "o":
+						txtDos.text = String((Number(txtUno.text))*16);
+						break;
+				}
+			break;
+		case "o":
+				switch(ident2){
+					case "k":
+						txtDos.text = String((Number(txtUno.text))/35.274);
+						break;
+					case "g":
+						txtDos.text = String((Number(txtUno.text))*28.3495);
+						break;
+					case "t":
+						txtDos.text = String((Number(txtUno.text))/35273.962);
+						break;
+					case "l":
+						txtDos.text = String((Number(txtUno.text))/16);
+						break;
+					case "o":
+						txtDos.text = txtUno.text;
+						break;
+				}
+			break;
+	}
+}
+//TERMINA PESO
+
+//INICIA LONGITUD
+
+if(banLength){
+	
+	switch(ident3){
+		case "mi":
+				switch(ident4){
+					case "mi":
+						txtDos.text = txtUno.text;
+						break;
+					case "ce":
+						txtDos.text = String((Number(txtUno.text))/10);
+						break;
+					case "me":
+						txtDos.text = String((Number(txtUno.text))/1000);
+						break;
+					case "ki":
+						txtDos.text = String((Number(txtUno.text))/1000000);
+						break;
+					case "ya":
+						txtDos.text = String((Number(txtUno.text))/(914.4));
+						break;
+					case "pi":
+						txtDos.text = String((Number(txtUno.text))/(304.8));
+						break;
+					case "pu":
+						txtDos.text = String((Number(txtUno.text))/(25.4));
+						break;
+				}
+			break;
+		case "ce":
+				switch(ident4){
+					case "mi":
+						txtDos.text = String((Number(txtUno.text))*10);
+						break;
+					case "ce":
+						txtDos.text = txtUno.text;
+						break;
+					case "me":
+						txtDos.text = String((Number(txtUno.text))/100);
+						break;
+					case "ki":
+						txtDos.text = String((Number(txtUno.text))/100000);
+						break;
+					case "ya":
+						txtDos.text = String((Number(txtUno.text))/(91.44));
+						break;
+					case "pi":
+						txtDos.text = String((Number(txtUno.text))/(30.48));
+						break;
+					case "pu":
+						txtDos.text = String((Number(txtUno.text))/(2.54));
+						break;
+				}
+			break;
+		case "me":
+				switch(ident4){
+					case "mi":
+						txtDos.text = String((Number(txtUno.text))*1000);
+						break;
+					case "ce":
+						txtDos.text = String((Number(txtUno.text))*100);
+						break;
+					case "me":
+						txtDos.text = txtUno.text;
+						break;
+					case "ki":
+						txtDos.text = String((Number(txtUno.text))/1000);
+						break;
+					case "ya":
+						txtDos.text = String((Number(txtUno.text))*(1.094));
+						break;
+					case "pi":
+						txtDos.text = String((Number(txtUno.text))*(3.281));
+						break;
+					case "pu":
+						txtDos.text = String((Number(txtUno.text))*(39.37));
+						break;
+				}
+			break;
+		case "ki":
+				switch(ident4){
+					case "mi":
+						txtDos.text = String((Number(txtUno.text))*1000000);
+						break;
+					case "ce":
+						txtDos.text = String((Number(txtUno.text))*100000);
+						break;
+					case "me":
+						txtDos.text = String((Number(txtUno.text))*1000);
+						break;
+					case "ki":
+						txtDos.text = txtUno.text;
+						break;
+					case "ya":
+						txtDos.text = String((Number(txtUno.text))*(1093.613));
+						break;
+					case "pi":
+						txtDos.text = String((Number(txtUno.text))*(3280.84));
+						break;
+					case "pu":
+						txtDos.text = String((Number(txtUno.text))*(39370.079));
+						break;
+				}
+			break;
+		case "ya":
+				switch(ident4){
+					case "mi":
+						txtDos.text = String((Number(txtUno.text))*(914.4));
+						break;
+					case "ce":
+						txtDos.text = String((Number(txtUno.text))*(91.44));
+						break;
+					case "me":
+						txtDos.text = String((Number(txtUno.text))/(1.094));
+						break;
+					case "ki":
+						txtDos.text = String((Number(txtUno.text))/(1093.613));
+						break;
+					case "ya":
+						txtDos.text = txtUno.text;
+						break;
+					case "pi":
+						txtDos.text = String((Number(txtUno.text))*3);
+						break;
+					case "pu":
+						txtDos.text = String((Number(txtUno.text))*36);
+						break;
+				}
+			break;
+			case "pi":
+				switch(ident4){
+					case "mi":
+						txtDos.text = String((Number(txtUno.text))*(304.8));
+						break;
+					case "ce":
+						txtDos.text = String((Number(txtUno.text))*(30.48));
+						break;
+					case "me":
+						txtDos.text = String((Number(txtUno.text))/(3.281));
+						break;
+					case "ki":
+						txtDos.text = String((Number(txtUno.text))/(3280.84));
+						break;
+					case "ya":
+						txtDos.text = String((Number(txtUno.text))/3);
+						break;
+					case "pi":
+						txtDos.text = txtUno.text;
+						break;
+					case "pu":
+						txtDos.text = String((Number(txtUno.text))*12);
+						break;
+				}
+			break;
+			case "pu":
+				switch(ident4){
+					case "mi":
+						txtDos.text = String((Number(txtUno.text))*(25.4));
+						break;
+					case "ce":
+						txtDos.text = String((Number(txtUno.text))*(2.54));
+						break;
+					case "me":
+						txtDos.text = String((Number(txtUno.text))/(39.37));
+						break;
+					case "ki":
+						txtDos.text = String((Number(txtUno.text))/(39370.079));
+						break;
+					case "ya":
+						txtDos.text = String((Number(txtUno.text))/36);
+						break;
+					case "pi":
+						txtDos.text = String((Number(txtUno.text))/12);
+						break;
+					case "pu":
+						txtDos.text = txtUno.text;
+						break;
+				}
+			break;
+	}
+	
+}
+//TERMINA LONGITUD
+
+//INICIA VELOCIDAD
+
+if(banSpeed){
+
+	switch(ident5){
+		case "mh":
+				switch(ident6){
+					case "mh":
+						txtDos.text = txtUno.text;
+						break;
+					case "ps":
+						txtDos.text = String((Number(txtUno.text))*(1.467));
+						break;
+					case "ms":
+						txtDos.text = String((Number(txtUno.text))/(2.237));
+						break;
+					case "kh":
+						txtDos.text = String((Number(txtUno.text))*(1.609));
+						break;
+					case "n":
+						txtDos.text = String((Number(txtUno.text))/(1.151));
+						break;
+				}
+			break;
+		case "ps":
+				switch(ident6){
+					case "mh":
+						txtDos.text = String((Number(txtUno.text))/(1.467));
+						break;
+					case "ps":
+						txtDos.text = txtUno.text;
+						break;
+					case "ms":
+						txtDos.text = String((Number(txtUno.text))/(3.281));
+						break;
+					case "kh":
+						txtDos.text = String((Number(txtUno.text))*(1.097));
+						break;
+					case "n":
+						txtDos.text = String((Number(txtUno.text))/(1.688));
+						break;
+				}
+			break;
+		case "ms":
+				switch(ident6){
+					case "mh":
+						txtDos.text = String((Number(txtUno.text))*(2.237));
+						break;
+					case "ps":
+						txtDos.text = String((Number(txtUno.text))*(3.281));
+						break;
+					case "ms":
+						txtDos.text = txtUno.text;
+						break;
+					case "kh":
+						txtDos.text = String((Number(txtUno.text))*(3.6));
+						break;
+					case "n":
+						txtDos.text = String((Number(txtUno.text))*(1.944));
+						break;
+				}
+			break;
+		case "kh":
+				switch(ident6){
+					case "mh":
+						txtDos.text = String((Number(txtUno.text))/(1.609));
+						break;
+					case "ps":
+						txtDos.text = String((Number(txtUno.text))/(1.097));
+						break;
+					case "ms":
+						txtDos.text = String((Number(txtUno.text))/(3.6));
+						break;
+					case "kh":
+						txtDos.text = txtUno.text;
+						break;
+					case "n":
+						txtDos.text = String((Number(txtUno.text))/(1.852));
+						break;
+				}
+			break;
+		case "n":
+				switch(ident6){
+					case "mh":
+						txtDos.text = String((Number(txtUno.text))*(1.151));
+						break;
+					case "ps":
+						txtDos.text = String((Number(txtUno.text))*(1.688));
+						break;
+					case "ms":
+						txtDos.text = String((Number(txtUno.text))/(1.944));
+						break;
+					case "kh":
+						txtDos.text = String((Number(txtUno.text))*(1.852));
+						break;
+					case "n":
+						txtDos.text = txtUno.text;
+						break;
+				}
+			break;
+	}
+}
+
+//TERMINA VELOCIDAD
+
+//INICIA DATOS
+	
+	if(banSize){
+
+	switch(ident7){
+		case "bi":
+				switch(ident8){
+					case "bi":
+						txtDos.text = txtUno.text;
+						break;
+					case "by":
+						txtDos.text = String((Number(txtUno.text))/8);
+						break;
+					case "kb":
+						txtDos.text = String((Number(txtUno.text))/(8000));
+						break;
+					case "mb":
+						txtDos.text = String((Number(txtUno.text))/(8000000));
+						break;
+					case "gb":
+						txtDos.text = String((Number(txtUno.text))/(8000000000));
+						break;
+					case "tb":
+						txtDos.text = String((Number(txtUno.text))/(8000000000000));
+						break;
+				}
+			break;
+		case "by":
+				switch(ident8){
+					case "bi":
+						txtDos.text = String((Number(txtUno.text))*(8));
+						break;
+					case "by":
+						txtDos.text = txtUno.text;
+						break;
+					case "kb":
+						txtDos.text = String((Number(txtUno.text))/(1000));
+						break;
+					case "mb":
+						txtDos.text = String((Number(txtUno.text))*(1000000));
+						break;
+					case "gb":
+						txtDos.text = String((Number(txtUno.text))/(1000000000));
+						break;
+					case "tb":
+						txtDos.text = String((Number(txtUno.text))/(1000000000000));
+						break;
+				}
+			break;
+		case "kb":
+				switch(ident8){
+					case "bi":
+						txtDos.text = String((Number(txtUno.text))*(8000));
+						break;
+					case "by":
+						txtDos.text = String((Number(txtUno.text))*(1000));
+						break;
+					case "kb":
+						txtDos.text = txtUno.text;
+						break;
+					case "mb":
+						txtDos.text = String((Number(txtUno.text))/(1000));
+						break;
+					case "gb":
+						txtDos.text = String((Number(txtUno.text))/(1000000));
+						break;
+					case "tb":
+						txtDos.text = String((Number(txtUno.text))/(1000000000));
+						break;
+				}
+			break;
+		case "mb":
+				switch(ident8){
+					case "bi":
+						txtDos.text = String((Number(txtUno.text))*(8000000));
+						break;
+					case "by":
+						txtDos.text = String((Number(txtUno.text))*(1000000));
+						break;
+					case "kb":
+						txtDos.text = String((Number(txtUno.text))*(1000));
+						break;
+					case "mb":
+						txtDos.text = txtUno.text;
+						break;
+					case "gb":
+						txtDos.text = String((Number(txtUno.text))/(1000));
+						break;
+					case "tb":
+						txtDos.text = String((Number(txtUno.text))/(1000000));
+						break;
+				}
+			break;
+		case "gb":
+				switch(ident8){
+					case "bi":
+						txtDos.text = String((Number(txtUno.text))*(8000000000));
+						break;
+					case "by":
+						txtDos.text = String((Number(txtUno.text))*(1000000000));
+						break;
+					case "kb":
+						txtDos.text = String((Number(txtUno.text))*(1000000));
+						break;
+					case "mb":
+						txtDos.text = String((Number(txtUno.text))*(1000));
+						break;
+					case "gb":
+						txtDos.text = txtUno.text;
+						break;
+					case "tb":
+						txtDos.text = String((Number(txtUno.text))/(1000));
+						break;
+				}
+			case "tb":
+				switch(ident8){
+					case "bi":
+						txtDos.text = String((Number(txtUno.text))*(8000000000000));
+						break;
+					case "by":
+						txtDos.text = String((Number(txtUno.text))*(1000000000000));
+						break;
+					case "kb":
+						txtDos.text = String((Number(txtUno.text))*(1000000000));
+						break;
+					case "mb":
+						txtDos.text = String((Number(txtUno.text))*(1000000));
+						break;
+					case "gb":
+						txtDos.text = String((Number(txtUno.text))*(1000));
+						break;
+					case "tb":
+						txtDos.text = txtUno.text;
+						break;
+				}
+			break;
+	}
+}
+	
+//TERMINA DATOS
+}
+
